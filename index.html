@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>The 5 Color Formula</title>
+    <link rel="icon" href="favicon.svg" sizes="any" type="image/svg+xml">
+    <link rel="stylesheet" href="./style.css">
+    
+</head>
+
+<body>
+    <!-- partial:index.partial.html -->
+    <svg onclick="dark()" id="dark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+        <path d="M223.5 32C100 32 0 132.3 0 256S100 480 223.5 480c60.6 0 115.5-24.2 155.8-63.4c5-4.9 6.3-12.5 3.1-18.7s-10.1-9.7-17-8.5c-9.8 1.7-19.8 2.6-30.1 2.6c-96.9 0-175.5-78.8-175.5-176c0-65.8 36-123.1 89.3-153.3c6.1-3.5 9.2-10.5 7.7-17.3s-7.3-11.9-14.3-12.5c-6.3-.5-12.6-.8-19-.8z" />
+    </svg>
+    <div class="c1">
+        <h1>You need <span>5</span> colors</h1>
+        <p>
+            - 1 primary color to highlight important elements
+            <br>
+            <span class="indent">(number 5 & button)</span>
+            <br>
+            - 3 for text, background and second background
+            <br>
+            <span class="indent">(primary-light, primary-dark & base colors)</span>
+            <br>
+            - And an optional secondary color to add a bit of personality
+            <br>
+            <span class="indent">(the hue slider)</span>
+        </p>
+        <a class="btn" href="https://youtu.be/AmY3db_Qs94" target="_blank">
+            How it works?
+        </a>
+        <a class="btn secondary" href="https://codepen.io/whosajid/pen/GRbXaoB" target="_blank">
+            GitHub
+        </a>
+
+        <div class="controls">
+            <p>Hue</p>
+            <input type="range" id="hue-slider" min="0" max="360" value="0">
+            <input type="number" id="hue-value" value="0">
+        </div>
+    </div>
+    <div class="c2">
+        <pre id="code">:root {
+    --color-primary: hsl(0, 80%, 20%);
+    --color-secondary: hsl(180, 20%, 40%);
+    --color-primary-light: hsl(60, 50%, 90%);
+    --color-primary-dark: hsl(60, 50%, 10%);
+    --color-base: hsl(300, 50%, 95%);
+}
+.dark {
+    --color-primary: hsl(0, 80%, 80%);
+    --color-secondary: hsl(180, 20%, 60%);
+    --color-primary-light: hsl(60, 50%, 10%);
+    --color-primary-dark: hsl(60, 50%, 90%);
+    --color-base: hsl(300, 50%, 5%);
+}</pre>
+        <button class="copy-btn">Copy</button>
+    </div>
+    <!-- partial -->
+    <script src="./script.js"></script>
+
+</body>
+
+</html>
